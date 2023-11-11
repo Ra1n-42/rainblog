@@ -7,17 +7,13 @@ const NavLinks = [
   { label: "Journey", route: "/journey" },
   { label: "About", route: "/about" },
 ];
-const CollapsSidebar = function () {
-  var Sidebar = document.querySelector("SideBarMenuContainer");
-  Sidebar?.classList.add("collaps");
-};
 
 function NavBar() {
   return (
     <div className={`${styles.SideBarMenuContainer}`}>
       <div className={styles.SideBarMenu}>
         <div className={styles.CloseButtonContainer}>
-          <button className={styles.BtnClose} onClick={CollapsSidebar}>
+          <button className={styles.BtnClose}>
             <span>&times;</span>
           </button>
         </div>
