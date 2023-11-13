@@ -14,7 +14,7 @@ export default function SideBar({ items }: Props) {
   const [expanded, setExpanded] = useState(false);
   return (
     <aside className="h-screen">
-      <nav className="h-full flex flex-col bg-white border-r shadow-sm ">
+      <nav className="h-full flex flex-col bg-white border-r shadow-sm">
         <div className="relative">
           {/* <img src="https://img.logoipsum.com/243.svg" alt="" /> */}
           <button
@@ -44,7 +44,7 @@ export default function SideBar({ items }: Props) {
 
                 <a
                   className={`overflow-hidden transition-all  ${
-                    expanded ? "w-30 ml-3" : "hidden w-0"
+                    expanded ? "w-31 ml-3" : "hidden w-0"
                   }`}
                   href={item.route}
                 >
