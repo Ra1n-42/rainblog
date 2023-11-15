@@ -16,7 +16,7 @@ const NavLinks = [
     icon: <RiSlideshow3Line size={20} />,
   },
   { label: "Journey", route: "/journey", icon: <GiStairsGoal size={20} /> },
-  { label: "About", route: "/about", icon: <SiAboutdotme size={20} /> },
+  { label: "WhoAmI?", route: "/about", icon: <SiAboutdotme size={20} /> },
 ];
 // const [theme, setTheme] = useState(true)
 function App() {

@@ -1,5 +1,7 @@
 import { useState } from "react";
-import { BiArrowToLeft, BiArrowToRight } from "react-icons/bi";
+import { BiArrowToLeft } from "react-icons/bi";
+import { RxHamburgerMenu } from "react-icons/rx";
+
 interface NavLink {
   label: string;
   route: string;
@@ -28,7 +30,7 @@ export default function SideBar({ items }: Props) {
             {expanded ? (
               <BiArrowToLeft size={25} />
             ) : (
-              <BiArrowToRight size={25} />
+              <RxHamburgerMenu size={25} />
             )}
           </button>
         </div>
@@ -38,7 +40,7 @@ export default function SideBar({ items }: Props) {
             {items.map((item) => (
               <li
                 key={item.route}
-                className="flex items-center cursor-pointer mt-10 group"
+                className="flex items-center  mt-10 group hover:text-blue-700"
               >
                 <a href={item.route}>{item.icon}</a>
 
