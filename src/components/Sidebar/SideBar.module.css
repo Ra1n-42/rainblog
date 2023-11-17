@@ -1,0 +1,9 @@
+.MenuButton {
+  overflow: hidden;
+  background: rgb(248 250 252);
+  box-shadow: 5px 5px 8px #eef3f8, -10px -5px 10px #ffffff;
+  &:hover {
+    background: rgb(248 250 252);
+    box-shadow: 2px 2px 8px #eef3f8, -5px -2px 5px #ffffff;
+  }
+}

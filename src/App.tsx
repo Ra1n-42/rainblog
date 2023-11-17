@@ -21,7 +21,7 @@ const NavLinks = [
 // const [theme, setTheme] = useState(true)
 function App() {
   return (
-    <div className="App flex bg-slate-100">
+    <div className="App flex bg-slate-50">
       <SideBar items={NavLinks} />
       <Router>
         <Routes>

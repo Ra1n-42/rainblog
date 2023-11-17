@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { BiArrowToLeft } from "react-icons/bi";
 import { RxHamburgerMenu } from "react-icons/rx";
-
+import styles from "./SideBar.module.css";
 interface NavLink {
   label: string;
   route: string;
@@ -16,12 +16,14 @@ export default function SideBar({ items }: Props) {
   const [expanded, setExpanded] = useState(false);
   return (
     <aside className="h-screen">
-      <nav className="h-full flex flex-col bg-white border-r shadow-sm">
+      <nav className="h-full flex flex-col">
         <div className="relative">
           <button
             title={expanded ? "collapse" : "expand"}
             className={`
-            absolute p-1.5 rounded-lg bg-gray-50 hover:bg-gray-100 top-1
+            ${
+              styles.MenuButton
+            } absolute p-1.5 rounded-lg top-4 flex effect justify-center items-center 
             ${expanded ? "right-2 " : "left-3"}
             `}
             onClick={() => setExpanded((curr) => !curr)}
@@ -52,7 +54,7 @@ export default function SideBar({ items }: Props) {
                 {!expanded && (
                   <div
                     className={`
-                    absolute rounded-md px-2 py-1 left-12 bg-indigo-100 text-indigo-800 text-sm 
+                    absolute rounded-md px-2 py-1 left-12  text-indigo-800 text-sm 
                     invisible opacity-20 -translate-x-3 -translate-y-7 transition-all group-hover:visible group-hover:opacity-100
                     group-hover:translate-x-0 mx-5
                     `}
