@@ -18,12 +18,11 @@ export default function SideBar({ items }: Props) {
     <aside className="h-screen">
       <nav className="h-full flex flex-col bg-white border-r shadow-sm">
         <div className="relative">
-          {/* <img src="https://img.logoipsum.com/243.svg" alt="" /> */}
           <button
-            title={expanded ? "close" : "open"}
+            title={expanded ? "collapse" : "expand"}
             className={`
             absolute p-1.5 rounded-lg bg-gray-50 hover:bg-gray-100 top-1
-            ${expanded ? "right-2" : "left-3"}
+            ${expanded ? "right-2 " : "left-3"}
             `}
             onClick={() => setExpanded((curr) => !curr)}
           >
@@ -38,25 +37,23 @@ export default function SideBar({ items }: Props) {
         <div className="Navcontainer pt-12">
           <ul className="NavList px-5">
             {items.map((item) => (
-              <li
-                key={item.route}
-                className="flex items-center  mt-10 group hover:text-blue-700"
-              >
-                <a href={item.route}>{item.icon}</a>
-
-                <a
-                  className={`overflow-hidden transition-all  ${
-                    expanded ? "w-31 ml-3" : "hidden w-0"
-                  }`}
-                  href={item.route}
-                >
-                  {item.label}
-                </a>
+              <li key={item.route} className="mt-10 group hover:text-blue-700 ">
+                <div className="flex items-center transition ease hover:-translate-y-1">
+                  <a href={item.route}>{item.icon}</a>
+                  <a
+                    className={`overflow-hidden transition-all ${
+                      expanded ? "w-31 ml-3" : "hidden w-0 "
+                    }`}
+                    href={item.route}
+                  >
+                    {item.label}
+                  </a>
+                </div>
                 {!expanded && (
                   <div
                     className={`
                     absolute rounded-md px-2 py-1 left-12 bg-indigo-100 text-indigo-800 text-sm 
-                    invisible opacity-20 -translate-x-3 transition-all group-hover:visible group-hover:opacity-100
+                    invisible opacity-20 -translate-x-3 -translate-y-7 transition-all group-hover:visible group-hover:opacity-100
                     group-hover:translate-x-0 mx-5
                     `}
                   >

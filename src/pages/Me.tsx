@@ -1,9 +1,13 @@
+import styles from "./styles/me.module.css";
+
 export default function Me() {
   return (
     <div className="min-h-screen flex justify-center w-screen bg-slate-50">
-      <section className="m-10">
-        <div className="WhoAmI">
-          <span className="text-lg font-bold">Hello I'm Rain.</span>
+      <section className="m-5 sm:m-20">
+        <div className="ContextText">
+          <span className={`italic text-lg font-bold ${styles.HeroName}`}>
+            Hello I'm Rain
+          </span>
           <br />
           <br />
           <p>I'm a self-taught Software Developer.</p>
